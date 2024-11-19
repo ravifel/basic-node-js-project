@@ -1,0 +1,106 @@
+Conceitos sobre node.js
+É usado o JavaScript puro;
+
+Oque é o node.js ?
+- Não é uma linguagem de programação;
+- É escrito em javascript e na execução é transpilado para uma linguagem que o navegador consiga ler e executar as ações.
+- É uma ferramenta construida sobre o motor JavaScript do Google Chorme para criar aplicações rápidas e escaláveis;
+- O problema: cada conexão de um cliente aloca um espaço na memória;
+- Com Node: cada conexão é um evento executado na engine no Node;
+- Ou seja, o Node suporta muito mais conexões do que PHP e Java em uma máqiona igual, por exemplo;
+
+- Aplicação que insere/pega/atualiza dados no banco de dados
+Para executar um arquivo node
+---> node index.js
+
+O COMANDO NODE:
+- Podemos executar instruções de JavaScript rodando o comando node;
+- Podemos fazer operações matemáticas, utilizar funções do JavaScript e muito mais;
+- É possivel programar pelo terminal quando o "node" está ativado;
+- Para sair do modo node no terminal é necessário clicar no "CTRL + C" duas vezes
+
+-----------------------------------
+
+---> NPM (Gerenciador de Pacotes do Node)
+- Ferramenta utilizada para instalar módulos de JavaScript;
+- O correto é instalar os pacotes diretamente em cada projeto;
+- Que podem fazer desde operações matemáticas até comunicação HTTP;
+- Instalamos um pacote pelo comando: "npm install <nome-pacote>";
+- Vem junto com o Node;
+
+-----------------------------------
+
+---> Iniciando um projeto
+- Na ultima aula vimos que o "node" reclamou da falta do "package.json";
+- O certo sempre é ter um arquivo desse ao iniciar um novo projeto;
+- Podemos criar a partir do template, utilizando o comando "npm init";
+- Daí teremos um projeto com o "package.json";
+- Este arquivo serve para configurações e salva nossas dependências e mais algumas informações, como por exemplo a lincença do projeto;
+
+-----------------------------------
+
+---> Módulo de file system
+- Um dos módulos mais utilizados;
+- Ele serve para trabalhar com arquivos e diretórios (Abrir arquivos, ler, alterar);
+- Já incluso no node, ou seja, não precisamos instalar;
+
+FileSystem: Escrevendo no arquivo:
+- Além de ler arquivo podemos também alterar o mesmo;
+- Chamamos isso de escrever no arquivo;
+
+-----------------------------------
+
+---> Módulo HTTP
+- Outro módulo muito utilizado, para fazer comunicações via HTTP;
+- O módulo já vem com o Node;
+- Pode criar um servidor que serve páginas web para nós;
+- É possível simular um pequeno servidor web;
+
+-----------------------------------
+
+O QUE É UMA API?
+- Application Programming Interface;
+- Uma maneira de se comunicar via HTTP a um servidor e fazer operações como: visualizar, deletar, criar e atualizar dados;
+- Grandes aplicações como "Facebook" e "Instagram" utilizam APIs;
+- E utilizam um framework chamado Express para isso.
+- Uma forma de isolar o código do Frontend e do Backend;
+- Mais de um serviço pode usar a mesma API;
+
+OQUE É "REST" E "RESTful" ?
+- Quando falamosem API estamos condicionados a falar de REST e RESTful também;
+- REST: Representational State Transfer, principios e regras que permitem criar uma aplicação com interfaces bem definidas;
+- RESTful: Capacidade de aplicar os principios do REST;
+
+REST E OS VERBOS HTTP:
+- Sempre que criamos uma API devemos utilizar os verbos HTTP corretos para cada URL da nossa aplicação;
+- Verbo GET: para solicitar dados;
+- Verbo POST: para inserir dados;
+- Verbo DELETE: para deletar dados;
+- Verbo PUT: para atualizar dados;
+
+EXPRESS
+- Permite unir todos esses conceitos;
+- Permite criar APIs bem construida e robustas;
+- Um framework web, muito utilizado para criar aplicações em Node.js;
+- Utiliza em seu core o módulo HTTP para criar as comunicações;
+- Se comunica com o Babkend. Faz as comunicações necessários entre o Frontend e o Servidor;
+- Além de outros módulos;
+- Podemos criar uma API com o Express facilmente;
+
+Instalar pelo NPM
+- Criar um novo projeto
+- npm init
+- npm install Express
+E então p Express será instalado e adicionado as depêndencias do nosso projeto;
+
+OQUE SÃO "ROTAS"?
+- Nos sites e nas APIs temos o que chamamos de rotas;
+- Que é basicamente a URL qe queremos acessar;
+- Porém quando tratamos de uma API chamamos as URLs de rota;
+- No Express vamos criar as nossas rotas para serem acessadas via HTTP e responderem baseadas numa lógica que inserimos;
+- E cada rota vai receber um método HTTP, que deve coincidir com o proposto pelo REST, conforme vimos anteriormente;
+
+POSTMAN
+- Utilizado para testar Api;
+- Bastante usado; 
+- Permite testar a Api sem ter interface gráfica;
